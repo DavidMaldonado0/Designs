@@ -1,6 +1,6 @@
 # Designs
 FrontEnd Design Portfolio
 
-Images availables o [a link](https://dribbble.com/eduardodavidmm)
+Images availables on [My Dribble Profile](https://dribbble.com/eduardodavidmm)
 
 Code available here.
