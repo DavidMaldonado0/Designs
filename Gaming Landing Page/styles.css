@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Rammetto One', cursive;
+  font-family: 'Ubuntu', sans-serif;
   overflow: hidden;
 }
 
@@ -13,6 +13,7 @@ nav {
   position: fixed;
   top: 20px;
   left: 20px;
+  animation: moveleft 1s ease-in;
 }
 
 nav a {
@@ -22,23 +23,13 @@ nav a {
 }
 
 header {
-  background: #ffd89b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to left,
-    #ffd89b,
-    #19547b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #ffd89b,
-    #19547b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #543850;
   height: auto;
   padding: 48px;
   width: 100%;
 }
 
-.container {
+.cont {
   width: 95%;
   max-width: 1200px;
   display: flex;
@@ -52,4 +43,69 @@ img {
   height: 450px;
   object-fit: cover;
   width: auto;
+}
+
+.text {
+  width: 50%;
+  color: #fff;
+}
+
+.text h1 {
+  font-size: 80px;
+  letter-spacing: 3px;
+}
+
+.text h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.text a {
+  align-items: center;
+  background-color: #fff;
+  display: inline-block;
+  color: #543850;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 30px;
+  border: 1px solid #fff;
+  width: 150px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.text a:hover {
+  background-color: #543850;
+  color: #fff;
+}
+
+.wave {
+  height: 100px;
+  width: 100%;
+  background: #543850;
+}
+
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
