@@ -6,20 +6,25 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  overflow: hidden;
 }
 
 nav {
   position: fixed;
   top: 20px;
   left: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon {
+  display: block;
+  z-index: 1;
   animation: moveleft 1s ease-in;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
-  display: inline-block;
 }
 
 header {
@@ -43,6 +48,7 @@ img {
   height: 450px;
   object-fit: cover;
   width: auto;
+  animation: moveright 2s ease-in;
 }
 
 .text {
@@ -51,7 +57,7 @@ img {
 }
 
 .text h1 {
-  font-size: 80px;
+  font-size: 90px;
   letter-spacing: 3px;
 }
 
@@ -84,6 +90,28 @@ img {
   height: 100px;
   width: 100%;
   background: #543850;
+}
+
+.links {
+  position: fixed;
+  display: flex;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  transition: all 1s ease;
+  background: #543850;
+}
+
+.one {
+  clip-path: polygon(0 0, 0% 0, 0% 0%, 0% 0%);
+}
+
+.two {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 @keyframes moveleft {
