@@ -28,3 +28,15 @@ navLink = getElementById('addEventListener')
 navLink.forEach(m => n.addEventListener('click', linkAction))
 
 
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 20000,
+    reset: true
+})
+
+
+sr.reveal('.home__title',{})
+sr.reveal('.button',{delay: 200})
+sr.reveal('.home__social-icon',{interval: 200})
+
