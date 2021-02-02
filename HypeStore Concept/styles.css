@@ -14,7 +14,8 @@ body {
   min-height: 100vh;
   width: 100%;
   background-color: #fffccc;
-  overflow: hidden;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
 }
 
 .navbar {
@@ -53,7 +54,6 @@ body {
   width: 3rem;
   cursor: pointer;
   display: flex;
-  background-color: black;
   align-items: center;
   justify-content: flex-end;
 }
@@ -96,6 +96,9 @@ body {
   z-index: 5;
   background-color: #fffccc;
   overflow: hidden;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: 0.5s;
 }
 
 header {
@@ -138,4 +141,57 @@ header {
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
+}
+
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.container.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.container.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.container.active .main {
+  animation: main-animation 0.5s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+.links {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: #eee;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: 1rem;
 }
